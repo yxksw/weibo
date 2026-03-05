@@ -14,19 +14,22 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
 
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Sync Weibo
         env:
           GIST_PAT: ${{ secrets.GIST_PAT }}
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           GIST_SHORT_IDS_STR: ${{ secrets.GIST_SHORT_IDS_STR }}
-        run: npm start
+        run: pnpm start
