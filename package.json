@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "echo HelloWorld"
+    "start": "node sync.js"
   },
   "keywords": [],
   "author": "SimonMa",
   "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
-    "axios": "^0.19.2",
-    "cross-env": "^7.0.0",
+    "axios": "^1.6.0",
+    "cross-env": "^7.0.3",
     "is-image-url": "^1.1.8",
     "slimbot": "^4.6.0"
   }
