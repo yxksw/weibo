@@ -6,8 +6,8 @@ const GIST_SHORT_IDS = process.env.GIST_SHORT_IDS_STR.split(",");
 const GITHUB_PAT = process.env.GIST_PAT;
 const BOT_TOKEN = process.env.BOT_TOKEN;
 
-const TELEGRAM_CHAT_ID = -1001249449971;
-const Login = "SimonAKing";
+const TELEGRAM_CHAT_ID = -1003715332842;
+const Login = "yxksw";
 const REPO = "weibo";
 
 const github = axios.create({
@@ -235,3 +235,4 @@ async function main() {
 main().catch((error) => {
   console.error("Unhandled error in main execution:", error);
 });
+
