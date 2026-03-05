@@ -127,7 +127,7 @@ function formatIssueContent(issue) {
   return `${issue.body}
 
 ---
-${labelsText}Original post: https://simonaking.com/blog/weibo`;
+${labelsText}Original post: https://gwitter.261770.xyz`;
 }
 
 function formatIssueTitle(issue) {
@@ -235,4 +235,5 @@ async function main() {
 main().catch((error) => {
   console.error("Unhandled error in main execution:", error);
 });
+
 
